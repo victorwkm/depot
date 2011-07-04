@@ -110,8 +110,6 @@
   font-weight: bold;
   margin-right: 2em;
 }
-<<<<<<< HEAD
-=======
 
 #banner {
   background: #9c9;
@@ -145,10 +143,14 @@
   padding-bottom: 1em;
   width: 16em;
   background: #141;
+  color: #FFF;
 }
 
 #side a {
   color: #bfb;
   font-size: small;
 }
->>>>>>> parent of d864259... Revert eec80381fd4ca9f89fd0d227b63f52aaf0355b47^..HEAD
+
+#store .entry form, #store .entry form div {
+  display: inline;
+}
