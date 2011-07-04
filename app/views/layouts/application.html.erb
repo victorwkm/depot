@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pragprog Books Online Store</title>
-  <%# stylesheet_link_tag :all %>
-	<%= stylesheet_link_tag "scaffold" %>
-	<%= stylesheet_link_tag "depot", :media => "all" %>
+  <title>Depot</title>
+  <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body id="store">
+<body>
 
+<<<<<<< HEAD
+<%= yield %>
+=======
 <div id="banner">
 	<%= image_tag "logo.png" %>
 	<%= @page_tilte || "Pragmatic Bookshelf" %>
@@ -21,12 +22,12 @@
 		<a href="">Questions</a><br />
 		<a href="">News</a><br />
 		<a href="">Contact</a><br />
-		<%= current_time %>
 	</div>
 	<div id="main">
 		<%= yield %>
 	</div>
 </div>
+>>>>>>> parent of d864259... Revert eec80381fd4ca9f89fd0d227b63f52aaf0355b47^..HEAD
 
 </body>
 </html>
