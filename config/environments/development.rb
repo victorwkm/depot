@@ -31,7 +31,7 @@ Depot::Application.configure do
     :port => 587,
     :domain => "your.domain",
     :authentication => "plain",
-    :user_name => "myname",
+    :user_name => "myname2",
     :password => "test",
     :enable_starttls_auto => true
   }
