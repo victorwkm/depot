@@ -1,0 +1,59 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+cn:
+  layouts:
+    application:
+      title: "Pragmatic 書架"
+      home: "主頁"
+      question: "問題"
+      news: "新聞"
+      contact: "聯絡我們"
+  store:
+    index:
+      title_html: "目錄"
+      add_html: "加入"
+  carts:
+    cart:
+      title: "購物車"
+      empty: "清空"
+      checkout: "付款"
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%n&nbsp;%u"
+  orders:
+    new:
+      legend: "資料"
+    form:
+      name: "名稱"
+      address_html: "地址"
+      email: "電郵"
+      pay_type: "付款"
+      pay_prompt_html: "請選擇"
+      submit: "確定"
+  
+  activerecord:
+    models:
+      order: "order"
+    attributes:
+      order:
+        address: "地址"
+        name: "名稱"
+        email: "電郵"
+        pay_type: "付款"
+    errors:
+      messages:
+        inclusion: "不在所選項目上"
+        blank: "不可以是空的"
+  errors:
+    template:
+      body: "body"
+      header:
+        one: "1 個錯誤"
+        other: "%{count} 個錯誤"
+  thanks: "多謝"

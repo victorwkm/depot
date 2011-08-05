@@ -12,7 +12,14 @@
 
 <div id="banner">
 	<%= image_tag "logo.png" %>
-	<%= @page_tilte || "Pragmatic Bookshelf" %>
+	
+	<%= form_tag store_path, :class => 'locale' do %>
+		<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
+		<%= submit_tag 'submit' %>
+		<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+	<% end %>
+	
+	<%= @page_tilte || t('.title') %>
 </div>
 
 <div id="columns">
@@ -23,11 +30,20 @@
 			<% end %>	
 		<% end %>	
 		
-		<a href="/">Home</a><br />
-		<a href="">Questions</a><br />
-		<a href="">News</a><br />
-		<a href="">Contact</a><br />
+		<a href="/"><%= t('.home') %></a><br />
+		<a href=""><%= t('.question') %></a><br />
+		<a href=""><%= t('.news') %></a><br />
+		<a href=""><%= t('.contact') %></a><br />
 		<%= current_time %>
+		
+		<% if session[:user_id] %>
+			<br />
+			<%= link_to 'Orders', orders_path %>
+			<%= link_to 'Products', products_path %>
+			<%= link_to 'Users', users_path %>
+			<%= button_to 'logout', logout_path, :method => :delete %>
+		<% end %>
+		
 	</div>
 	<div id="main">
 		<%= yield %>

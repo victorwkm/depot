@@ -1,0 +1,23 @@
+<% if flash[:alert] %>
+	<p><%= flash[:alert ] %></p>
+<% end %>
+
+<%= form_tag do %>
+	<fieldset>
+		<legend>log in</legend>
+		
+		<div>
+			<label for="name">name</label>
+			<%= text_field_tag :name, params[:name] %>
+		</div>
+		
+		<div>
+			<label for="password">password</label>
+			<%= text_field_tag :password, params[:password] %>
+		</div>
+		
+		<div>
+			<%= submit_tag "login" %>
+		</div>
+	</fieldset>
+<% end %>
